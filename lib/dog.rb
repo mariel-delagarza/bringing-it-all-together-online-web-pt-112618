@@ -65,8 +65,3 @@ class Dog
   self
   end
 end
-
-
-
-
-end
