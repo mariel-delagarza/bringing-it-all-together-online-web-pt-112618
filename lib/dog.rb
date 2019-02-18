@@ -45,10 +45,10 @@ class Dog
    end.first
   end
 
-  def update 
+  def update
     sql = "UPDATE dogs SET name = ?, breed = ?, WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.breed, self.id)
-  end 
+  end
 
   def save
   if self.id
@@ -63,7 +63,7 @@ class Dog
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
   end
 end
-    
+
 
 
 
