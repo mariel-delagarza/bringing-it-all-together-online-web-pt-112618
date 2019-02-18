@@ -62,7 +62,7 @@ class Dog
     sql = <<-SQL
           SELECT *
           FROM dogs
-          WHERE name = ?  
+          WHERE name = ?
           AND breed = ?
           LIMIT 1
         SQL
@@ -77,7 +77,7 @@ class Dog
     end
     dog
   end
-  
+
   def update
     sql = "UPDATE dogs SET name = ?, breed = ?, WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.breed, self.id)
